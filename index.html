@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme</title>
+    <style>
+        @font-face {
+            font-family: 'CourierPS';
+            src: url('Courier-PS-Regular.ttf') format('truetype');
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'CourierPS', Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            margin-top: 20vh;
+        }
+        .logo img {
+            width: 200px;
+        }
+        .datetime {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .links {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.5em; /* Adjusted line height */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.svg" alt="Supreme Logo">
+    </div>
+    <div class="datetime" id="datetime">
+        <!-- The time will be displayed here -->
+    </div>
+    <div class="links">
+        <div>cnvrs</div>
+        <div>os</div>
+        <div>is</div>
+        <div>coming</div>
+        <div>soon</div>
+        <div>about</div>
+        <div>4</div>
+        <div>months</div>
+        <div>cnvrscnvrscnvrs@gmail.com</div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const options = { timeZone: 'America/Chicago', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const now = new Date().toLocaleTimeString('en-US', options);
+            document.getElementById('datetime').textContent = `08/31/2024 ${now}pm CHI`;
+        }
+        
+        // Initial call to set the time immediately
+        updateTime();
+        
+        // Update the time every second
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
