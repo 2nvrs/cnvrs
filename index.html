@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNVRS</title>
-       <link rel="icon" type="image/png" href="favicon.ico">
+
+
+    <link rel="icon" type="image/png" href="favicon.png"> 
+
     <style>
         @font-face {
             font-family: 'CourierPS';
@@ -17,7 +20,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            user-select: none;
+            user-select: none; 
         }
         .logo {
             margin-top: 20vh;
@@ -33,6 +36,10 @@
             margin-top: 20px;
             font-size: 18px;
             line-height: 1.5em;
+        }
+        .discord-embed {
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -55,7 +62,6 @@
     </div>
 
     <script>
-<script>
         function updateTime() {
             const options = {
                 timeZone: 'America/Chicago',
@@ -72,12 +78,9 @@
             document.getElementById('datetime').textContent = `${date} ${time}pm Chicago`;
         }
         
-        // Initial call to set the date and time immediately
         updateTime();
         
-        // Update the date and time every second
         setInterval(updateTime, 1000);
-    </script>
     </script>
 </body>
 </html>
