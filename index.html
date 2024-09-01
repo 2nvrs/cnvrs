@@ -16,6 +16,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            user-select: none;
         }
         .logo {
             margin-top: 20vh;
@@ -30,7 +31,7 @@
         .links {
             margin-top: 20px;
             font-size: 18px;
-            line-height: 1.5em; /* Adjusted line height */
+            line-height: 1.5em;
         }
     </style>
 </head>
@@ -39,7 +40,6 @@
         <img src="logo.svg" alt="Supreme Logo">
     </div>
     <div class="datetime" id="datetime">
-        <!-- The time will be displayed here -->
     </div>
     <div class="links">
         <div>cnvrs</div>
@@ -60,10 +60,8 @@
             document.getElementById('datetime').textContent = `08/31/2024 ${now}pm CHI`;
         }
         
-        // Initial call to set the time immediately
         updateTime();
         
-        // Update the time every second
         setInterval(updateTime, 1000);
     </script>
 </body>
