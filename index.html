@@ -55,15 +55,29 @@
     </div>
 
     <script>
+<script>
         function updateTime() {
-            const options = { timeZone: 'America/Chicago', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-            const now = new Date().toLocaleTimeString('en-US', options);
-            document.getElementById('datetime').textContent = `08/31/2024 ${now}pm CHI`;
+            const options = {
+                timeZone: 'America/Chicago',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            const now = new Date().toLocaleString('en-US', options);
+            const [date, time] = now.split(', ');
+            document.getElementById('datetime').textContent = `${date} ${time}pm Chicago`;
         }
         
+        // Initial call to set the date and time immediately
         updateTime();
         
+        // Update the date and time every second
         setInterval(updateTime, 1000);
+    </script>
     </script>
 </body>
 </html>
